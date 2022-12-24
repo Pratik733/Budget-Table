@@ -37,7 +37,7 @@ function table() {
       const data = await response.json();
       console.log(data);
       setResponseData(data);
-    } catch (error) {
+    } catch (error:any) {
       setError(error);
     }
   }
@@ -60,14 +60,14 @@ function table() {
       const data = await response.json();
       console.log(data); //Log response
     }
-    catch (error) {
+    catch (error: any) {
       setError(error);
     }
   }
 
 
   const [sub, setSub] = useState(0);
-  function updateTotal(event) {
+  function updateTotal(event: any) {
     const inputElements = event.target.parentNode.parentNode.querySelectorAll('input');
     const outputElement = event.target.parentNode.parentNode.querySelector('output');
     let total = 0;
